@@ -7,7 +7,7 @@
     android:id="@+id/refresh"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_main_activity"
+    android:background="@drawable/background"
     android:paddingStart="16dp"
     android:paddingEnd="16dp">
 
@@ -37,4 +37,3 @@
     </FrameLayout>
 
 </android.support.v4.widget.SwipeRefreshLayout>
-
