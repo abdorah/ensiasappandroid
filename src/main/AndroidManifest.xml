@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.ensias.moneyManager">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".authorizationActivityPack.AuthorizationActivity"
+                  android:noHistory="true"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateAlwaysHidden">
+        </activity>
+
+        <activity android:name=".mainActivityPack.MainActivity"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".mainActivityPack.CardViewActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".addActivityPack.AddActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".authorizationActivityPack.NewUserActivity"
+                  android:noHistory="true"
+                  android:screenOrientation="portrait">
+        </activity>
+
+    </application>
+
+</manifest>
