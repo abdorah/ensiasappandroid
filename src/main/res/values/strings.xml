@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wallety</string>
+    <string name="app_name">Money Manger</string>
     <string name="welcome">Welcome to</string>
     <string name="pass_code">Create your PassCode</string>
     <string name="pass_code_wrong">The PassCode cannot be empty and less than 5 number</string>
@@ -33,7 +33,7 @@
 
     <string name="positive_button">OK</string>
     <string name="negative_button">Cancel</string>
-    <string name="title_dialog">Wallety</string>
+    <string name="title_dialog">Money Manager</string>
     <string name="message_remove">Do you want to remove these items?</string>
 
 </resources>
