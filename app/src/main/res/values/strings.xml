@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Money Manger</string>
     <string name="welcome">Welcome to</string>
-    <string name="pass_code">Create your PassCode</string>
-    <string name="pass_code_wrong">The PassCode cannot be empty and less than 5 number</string>
+    <string name="pass_code">Create your Password</string>
+    <string name="pass_code_wrong">Provide a valid password</string>
 
     <string name="button_cancel">cancel</string>
-    <string name="button_delete">delete</string>
+    <string name="button_delete">Delete</string>
 
     <string name="button_1">1</string>
     <string name="button_2">2</string>
@@ -19,7 +19,7 @@
     <string name="button_0">0</string>
 
     <string name="parameters">Parameters</string>
-    <string name="change_user">Change passcode</string>
+    <string name="change_user">Change password</string>
     <string name="exit">Exit</string>
 
     <string name="tab_expense">Expense</string>
@@ -27,13 +27,13 @@
     <string name="tab_balance">Balance</string>
     <string name="hint_item_name">Item name</string>
     <string name="hint_item_price">1000 $</string>
-    <string name="toast_isEmpty">The item\'s name or item\'s price cannot be empty</string>
+    <string name="toast_isEmpty">Prise or Item name is empty</string>
     <string name="confirm">confirm</string>
     <string name="delete">Delete</string>
 
     <string name="positive_button">OK</string>
     <string name="negative_button">Cancel</string>
     <string name="title_dialog">Money Manager</string>
-    <string name="message_remove">Do you want to remove these items?</string>
+    <string name="message_remove">Are you sure you want to remove these items?</string>
 
 </resources>

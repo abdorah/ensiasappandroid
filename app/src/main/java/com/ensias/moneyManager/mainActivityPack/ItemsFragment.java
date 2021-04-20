@@ -23,10 +23,7 @@ import java.util.List;
 import static com.ensias.moneyManager.addActivityPack.AddActivity.*;
 import static com.ensias.moneyManager.Item.*;
 
-/**
- * ItemsFragment show our list of items. We create ItemsFragment with type which we want to create
- * Type are income and expense
- */
+
 
 public class ItemsFragment extends Fragment {
 
@@ -47,8 +44,7 @@ public class ItemsFragment extends Fragment {
         bundle.putString(KEY_TYPE, type);
         fragment.setArguments(bundle);
         return fragment;
-        // This method create our fragment. We put item's type into a Bundle and
-        // then we put the Bundle into the fragment and return it
+
     }
 
     @Override
@@ -59,14 +55,14 @@ public class ItemsFragment extends Fragment {
             throw new IllegalStateException("Unknown Fragment Type");
         }
         mAdapter = new MyRecyclerViewAdapter();
-        // We get item's type which we putted into the Bundle
+
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_items, container, false);
-        // We draw our interface (Fragment_items_layout) and return the view
+
     }
 
     @Override
@@ -78,7 +74,7 @@ public class ItemsFragment extends Fragment {
                 Intent intent = new Intent(getContext(), AddActivity.class);
                 intent.putExtra(EXTRA_TYPE, mType);
                 startActivityForResult(intent, RC_ADD_ITEM);
-                // We put item's type into an intent and transmit type to AddActivity class
+
             }
         });
 
@@ -95,7 +91,7 @@ public class ItemsFragment extends Fragment {
                 mItemsList = mDataBaseDbHelper.loadItems(mType);
                 mAdapter.notifyDataSetChanged();
                 mRefreshLayout.setRefreshing(false);
-                // Load items from database
+
             }
         });
 
@@ -112,7 +108,7 @@ public class ItemsFragment extends Fragment {
             mItemsList.add(mItem);
             mDataBaseDbHelper.addNewItem(mItem);
             mAdapter.notifyDataSetChanged();
-            // We get a new item from AddActivity class
+
         }
     }
 }

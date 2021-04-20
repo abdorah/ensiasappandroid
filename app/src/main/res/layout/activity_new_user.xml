@@ -7,18 +7,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/background"
-    tools:context="com.ensias.moneyManager.authorizationActivityPack.AuthorizationActivity"
+    tools:context="com.ensias.moneyManager.authenticationActivity.AuthorizationActivity"
     android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="144dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_marginTop="-120dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="casual"
         android:text="@string/welcome"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:fontFamily="@font/roboto"/>
+        android:layout_marginTop="40dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,9 +34,9 @@
         android:layout_gravity="center"
         android:text="@string/app_name"
         android:textColor="@android:color/white"
-        android:textSize="44sp"
+        android:textSize="48sp"
         android:textStyle="bold"
-        android:fontFamily="@font/roboto"/>
+        android:fontFamily="@font/amarante"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/pass_code"
-            android:textSize="15sp"
+            android:textSize="20sp"
             android:textColor="@android:color/white"/>
 
         <EditText
@@ -52,7 +60,7 @@
             android:maxLength="5"
             android:inputType="number"
             android:padding="5dp"
-            tools:text="12345"
+            tools:text="* * * * * "
             android:textSize="20sp"
             android:textColor="@android:color/white"/>
 

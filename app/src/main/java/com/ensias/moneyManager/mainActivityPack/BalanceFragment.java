@@ -24,10 +24,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * BalanceFragment show us our balance. I used a pieChart from this github's repository
- * com.github.PhilJay:MPAndroidChart:v3.0.3
- */
+
 
 public class BalanceFragment extends Fragment {
 
@@ -52,7 +49,7 @@ public class BalanceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_balance, container, false);
         return view;
-        // We draw our interface (Fragment_balance_layout) and return the view
+
     }
 
     @Override
@@ -72,16 +69,11 @@ public class BalanceFragment extends Fragment {
             public void onRefresh() {
                 loadItemsBalance();
                 mRefreshLayout.setRefreshing(false);
-                // Add refresh listener our swipe. When we swipe items are loading from database
+
             }
         });
 
-        /**
-         * PieChart is Android chart view / graph view library, supporting line- bar- pie- radar-
-         * bubble- and candlestick charts as well as scaling, dragging and animations.
-         * More information about this library on link below
-         * https://github.com/PhilJay/MPAndroidChart
-         */
+
         mPieChart = view.findViewById(R.id.pie_chart);
         mPieChart.setUsePercentValues(true);
         mPieChart.getDescription().setEnabled(false);
@@ -108,8 +100,7 @@ public class BalanceFragment extends Fragment {
     }
 
     private void loadItemsBalance(){
-        // Load item's expense and income total values. Then we consider a balance
-        // Add the values into TextViews and PieChart
+
         mTotalExpense = mDataBaseDbHelper.loadTotalValuesForBalance(Item.TYPE_EXPENSE);
         mTotalIncome = mDataBaseDbHelper.loadTotalValuesForBalance(Item.TYPE_INCOME);
         mBalanceValue = mTotalIncome - mTotalExpense;

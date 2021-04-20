@@ -12,13 +12,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.ensias.moneyManager.R;
-import com.ensias.moneyManager.authorizationActivityPack.AuthorizationActivity;
-import com.ensias.moneyManager.authorizationActivityPack.NewUserActivity;
+import com.ensias.moneyManager.authenticationActivity.AuthorizationActivity;
+import com.ensias.moneyManager.authenticationActivity.NewUserActivity;
 import com.ensias.moneyManager.data.DataBaseDbHelper;
 
-/**
- * MainActivity show us our fragments and check does database have user's password
- */
+
+
+
 
 public class MainActivity extends AppCompatActivity {
     public static final int RC_CODE = 555;
@@ -45,12 +45,10 @@ public class MainActivity extends AppCompatActivity {
         mDataBaseDbHelper = new DataBaseDbHelper(getApplicationContext());
         if (mDataBaseDbHelper.getUserPassCode().equals("")) {
             startActivity(new Intent(this, NewUserActivity.class));
-            // Because MainActivity is launcher activity we check password
-            // If database hasn't user's password we go to NewUserActivity
         }
         else
             startActivityForResult(new Intent(this, AuthorizationActivity.class), RC_CODE);
-            // If database has user's password we start AuthorizationActivity for result
+
     }
 
     @Override
@@ -62,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), getResources());
                 mViewPager.setAdapter(mPagerAdapter);
                 mTabLayout.setupWithViewPager(mViewPager);
-                // If result is true, we fill MainActivity
             }
         }
     }
@@ -74,16 +71,12 @@ public class MainActivity extends AppCompatActivity {
             mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), getResources());
             mViewPager.setAdapter(mPagerAdapter);
             mTabLayout.setupWithViewPager(mViewPager);
-            // If isLogin is true, we fill MainActivity
         }
         else if (mDataBaseDbHelper.getUserPassCode().equals("")) {
             startActivity(new Intent(this, NewUserActivity.class));
-            // Because MainActivity is launcher activity we check password
-            // If database hasn't user's password we go to NewUserActivity
         }
         else {
             startActivityForResult(new Intent(this, AuthorizationActivity.class), RC_CODE);
-            // If isLogin is false, we start AuthorizationActivity for result
         }
     }
 
@@ -101,12 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 mDataBaseDbHelper.mDataBaseItems.execSQL(mDataBaseDbHelper.SQL_DELETE_USERS_TABLE);
                 mDataBaseDbHelper.mDataBaseItems.execSQL(mDataBaseDbHelper.SQL_CREATE_USERS_TABLE);
                 startActivity(new Intent(this, NewUserActivity.class));
-                // Change the password. We delete the user password's table and create a new table
-                // when we put a new password into the table
                 return true;
+
             case R.id.exit:
                 MainActivity.this.finish();
-                // Exit from application
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

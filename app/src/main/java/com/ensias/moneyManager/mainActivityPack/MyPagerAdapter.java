@@ -9,9 +9,7 @@ import com.ensias.moneyManager.R;
 
 import static com.ensias.moneyManager.Item.*;
 
-/**
- * PagerAdapter controls our fragment and create fragment into our tabs
- */
+
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
     public static final int NUM_ITEMS = 3;
@@ -27,16 +25,16 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0: {
                 return ItemsFragment.createItemFragment(TYPE_EXPENSE);
-                // The first tab is expense
+
             }
             case 1: {
                 return ItemsFragment.createItemFragment(TYPE_INCOME);
-                // The second tab is income
+
             }
             case 2: {
                 BalanceFragment tabBalance = new BalanceFragment();
                 return tabBalance;
-                // The third tab is balance
+
             }
             default:
                 return null;
@@ -60,6 +58,6 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
             default:
                 return null;
         }
-        // Put titles into our tab_layout
+
     }
 }
