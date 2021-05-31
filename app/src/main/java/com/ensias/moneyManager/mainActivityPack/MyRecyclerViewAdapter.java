@@ -3,11 +3,11 @@ package com.ensias.moneyManager.mainActivityPack;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.view.ActionMode;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ActionMode;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,7 +24,7 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+import java.util.Locale;
 
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewAdapter.ItemsViewHolder> {
@@ -69,7 +69,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
     @Override
     public void onBindViewHolder(final MyRecyclerViewAdapter.ItemsViewHolder holder, final int position) {
         holder.mItemNameTextView.setText(mItems.get(position).getName());
-        holder.mItemPriceTextView.setText(NumberFormat.getCurrencyInstance().format(mItems.get(position).getPrice()));
+        holder.mItemPriceTextView.setText(NumberFormat.getCurrencyInstance(Locale.FRANCE).format(mItems.get(position).getPrice()));
         holder.mCardView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {

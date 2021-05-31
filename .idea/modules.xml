@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ensiasappandroid-master.iml" filepath="$PROJECT_DIR$/.idea/modules/ensiasappandroid-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ensiasappandroid-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ensiasappandroid-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EnsiasMoneyManager.iml" filepath="$PROJECT_DIR$/.idea/modules/EnsiasMoneyManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EnsiasMoneyManager.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EnsiasMoneyManager.app.iml" />
     </modules>
   </component>
 </project>

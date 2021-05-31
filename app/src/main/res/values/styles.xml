@@ -43,9 +43,9 @@
     </style>
 
     <style name="CardViewTextStyle">
-        <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">#f5f5f5</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:fontFamily">@font/acme</item>
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">textStart</item>
         <item name="android:paddingStart">20dp</item>
@@ -55,7 +55,7 @@
 
     <style name="TextAddActivity">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">26sp</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:gravity">center</item>
     </style>

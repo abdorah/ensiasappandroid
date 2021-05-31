@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.SwipeRefreshLayout
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/refresh"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background"
+    android:background="#424242"
     android:paddingEnd="16dp"
     android:paddingStart="16dp">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
@@ -22,13 +22,13 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/acme"
             android:textColor="@android:color/white"
-            android:textSize="40sp"
+            android:textSize="45sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="3000 $"/>
+            tools:text="3000 €"/>
 
         <TextView
             android:id="@+id/textView"
@@ -37,6 +37,7 @@
             android:layout_height="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:fontFamily="@font/acme"
             android:text="@string/tab_balance"
             android:textAllCaps="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,11 +53,12 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+
+            android:textSize="25sp"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:text="1000 $"/>
+            tools:text="1000 €"/>
 
         <TextView
             android:id="@+id/sum_income"
@@ -67,11 +69,11 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:text="4000 $"/>
+            tools:text="4000 €"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -103,7 +105,7 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/sum_income"/>
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,6 +130,6 @@
 
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.v4.widget.SwipeRefreshLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

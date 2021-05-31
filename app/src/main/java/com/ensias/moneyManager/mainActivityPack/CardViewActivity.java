@@ -1,8 +1,8 @@
 package com.ensias.moneyManager.mainActivityPack;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import androidx.cardview.widget.CardView;
 
 import com.ensias.moneyManager.R;
 

@@ -26,7 +26,7 @@
     <string name="tab_income">Income</string>
     <string name="tab_balance">Balance</string>
     <string name="hint_item_name">Item name</string>
-    <string name="hint_item_price">1000 $</string>
+    <string name="hint_item_price">1000 €</string>
     <string name="toast_isEmpty">Prise or Item name is empty</string>
     <string name="confirm">confirm</string>
     <string name="delete">Delete</string>

@@ -11,4 +11,5 @@
     <color name="colorSelected">#bf5d29</color>
     <color name="colorExpense">#e38e7172</color>
     <color name="colorIncome">#e59ca0af</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

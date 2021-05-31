@@ -5,18 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="#424242"
     android:scaleType="fitXY"
     tools:context="com.ensias.moneyManager.mainActivityPack.MainActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout_add_activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAppBar"
         android:fitsSystemWindows="true">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_add_activity"
             tools:title="Add item"
             app:titleTextColor="@android:color/white"
@@ -25,9 +25,9 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="10dp">
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:padding="16dp"
@@ -47,7 +47,7 @@
             android:textAlignment="textStart"
             android:layout_height="wrap_content"
             android:hint="@string/hint_item_name"
-            android:textColorHint="@color/colorCardView"/>
+            android:textColorHint="#f5f5f5"/>
 
         <EditText
             android:id="@+id/item_price_edit_text"
@@ -56,7 +56,7 @@
             android:layout_weight="2"
             style="@style/TextAddActivity"
             android:hint="@string/hint_item_price"
-            android:textColorHint="@color/colorCardView"
+            android:textColorHint="#f5f5f5"
             android:textAlignment="center"
             android:inputType="number"
             android:maxLines="1"/>

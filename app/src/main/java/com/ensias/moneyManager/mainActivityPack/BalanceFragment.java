@@ -1,16 +1,15 @@
 package com.ensias.moneyManager.mainActivityPack;
 
 import android.graphics.Color;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
@@ -23,7 +22,7 @@ import com.ensias.moneyManager.data.DataBaseDbHelper;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Locale;
 
 
 public class BalanceFragment extends Fragment {
@@ -37,7 +36,7 @@ public class BalanceFragment extends Fragment {
     private int mBalanceValue;
     private SwipeRefreshLayout mRefreshLayout;
     private List <Integer> mColorsList = new ArrayList<>();
-    // ColorList is list of color for pie chart
+
 
     private ArrayList<PieEntry> mPieChartValues;
     private PieDataSet mPieChartdataSet;
@@ -77,12 +76,7 @@ public class BalanceFragment extends Fragment {
         mPieChart = view.findViewById(R.id.pie_chart);
         mPieChart.setUsePercentValues(true);
         mPieChart.getDescription().setEnabled(false);
-        mPieChart.setExtraOffsets(5, 5, 5, 5);
-        mPieChart.setDragDecelerationFrictionCoef(0.1f);
-        mPieChart.setDrawHoleEnabled(false);
-        mPieChart.setHoleColor(Color.WHITE);
-        mPieChart.setTransparentCircleRadius(61f);
-        mPieChart.animateY(500, Easing.EasingOption.EaseInCubic);
+
 
         mPieChartValues = new ArrayList<>();
         mPieChartValues.add(new PieEntry(0f, getResources().getText(R.string.tab_expense).toString() + ", %"));
@@ -104,9 +98,9 @@ public class BalanceFragment extends Fragment {
         mTotalExpense = mDataBaseDbHelper.loadTotalValuesForBalance(Item.TYPE_EXPENSE);
         mTotalIncome = mDataBaseDbHelper.loadTotalValuesForBalance(Item.TYPE_INCOME);
         mBalanceValue = mTotalIncome - mTotalExpense;
-        mBalance.setText(NumberFormat.getCurrencyInstance().format(mBalanceValue));
-        mSumExpence.setText(NumberFormat.getCurrencyInstance().format(mTotalExpense));
-        mSumIncome.setText(NumberFormat.getCurrencyInstance().format(mTotalIncome));
+        mBalance.setText(NumberFormat.getCurrencyInstance(Locale.FRANCE).format(mBalanceValue));
+        mSumExpence.setText(NumberFormat.getCurrencyInstance(Locale.FRANCE).format(mTotalExpense));
+        mSumIncome.setText(NumberFormat.getCurrencyInstance(Locale.FRANCE).format(mTotalIncome));
         if (mTotalIncome + mTotalExpense != 0){
             mPieChartValues.clear();
             mPieChartValues.add(new PieEntry((float) (mTotalExpense/ 100), getResources().getText(R.string.tab_expense).toString() + ", %"));
